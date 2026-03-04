@@ -1,0 +1,22 @@
+server:
+  port: 8085
+
+spring:
+  application:
+    name: credit-card-service
+
+  datasource:
+    url: jdbc:postgresql://localhost:5432/agent_bank_db
+    username: postgres
+    password: '1709'
+    driver-class-name: org.postgresql.Driver
+
+  jpa:
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+
+service:
+  credit-card:
+    use-mock: true # Set to false to use real DB
